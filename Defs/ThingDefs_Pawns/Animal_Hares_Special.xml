@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+
+  <ThingDef ParentName="BaseHare">
+    <defName>Abilihare</defName>
+    <label>abilihare</label>
+    <description>Ability hare can use abilities</description>
+    <statBases>
+      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+    </statBases>
+    <race>
+      <useMeatFrom>Hare</useMeatFrom>
+    </race>
+	<comps>
+		<li Class="AbilityUser.CompProperties_AbilityUser"/>
+		<li Class="AIPawnController.CompProperties_AbilityController">
+			<Abilities>
+				<li>CC_Shrapnel</li>
+			</Abilities>
+		</li>
+	</comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="HareBase">
+    <defName>Abilihare</defName>
+    <label>Abilihare</label>
+    <race>Abilihare</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+          <drawSize>1</drawSize>
+          <color>(180,180,180)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+          <drawSize>1.25</drawSize>
+          <color>(180,180,180)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Hare</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(180,180,180)</color>
+          <shadowData>
+            <volume>(0.32, 0.35, 0.32)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Hare/Dessicated_Hare</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

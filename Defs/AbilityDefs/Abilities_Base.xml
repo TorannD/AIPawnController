@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <!-- ========================BaseDef================================== -->
+
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+   <defName>Projectile_Default</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>default</label>
+   <graphicData>
+		<texPath>Projectiles/invis</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+   </graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>Blunt</damageDef>
+		<damageAmountBase>0</damageAmountBase>
+		<speed>999</speed>
+   </projectile>
+ </ThingDef>
+ 
+  <!-- Creepy Clock -->	
+ 
+ <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+   <defName>Projectile_CC_Shrapnel</defName>
+   <thingClass>AbilityUser.Projectile_AbilityBase</thingClass>
+   <label>shrapnel</label>
+   <graphicData>
+		<texPath>Things/Projectile/Bullet_Small</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+   </graphicData>
+   <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>Blunt</damageDef>
+		<damageAmountBase>6</damageAmountBase>
+		<stoppingPower>1</stoppingPower>
+		<speed>43</speed>
+   </projectile>
+ </ThingDef> 
+
+    <AbilityUser.AbilityDef ParentName="BaseAbility">
+        <defName>CC_Shrapnel</defName>
+        <label>Creepy Clock Shrapnel</label>
+        <description>stream of sharp shrapnel</description>
+		<MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+				<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+				<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+				<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+				<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Projectile_CC_Shrapnel</defaultProjectile>
+            <abilityDef>CC_Shrapnel</abilityDef>
+            <warmupTime>2</warmupTime>
+            <SecondsToRecharge>8</SecondsToRecharge>
+            <range>28</range>
+            <burstShotCount>10</burstShotCount>
+			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <soundCast>Shot_Revolver</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>1</muzzleFlashScale>
+		    <AlwaysHits>true</AlwaysHits>
+            <isPrimary>false</isPrimary>
+			<isViolent>false</isViolent>
+			<AbilityTargetCategory>TargetThing</AbilityTargetCategory>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>false</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </AbilityUser.AbilityDef>
+
+</Defs>

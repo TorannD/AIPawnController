@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Pawn Ability Controller</name>
+	<author>Torann</author>
+	<targetVersion>1.0.0</targetVersion>
+	<description>Version 1.0.0
+
+Gives any pawn non-standard attacks and abilities.
+	</description>
+</ModMetaData>
